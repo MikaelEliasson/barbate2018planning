@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Träningar Spanien 2017</title>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            background-color: #f3f3f3;
+        }
+
+        h1 {
+            font-weight: 100;
+            margin: 0;
+            padding: 5px 10px 0px;
+            text-transform: uppercase;
+            color: #1f5d8b;
+            font-size: 1.3em;
+        }
+
+        h2 {
+            font-weight: 100;
+            margin: 0 0 10px 0;
+            color: #c10ba7;
+            margin-top: 20px;
+            font-size: 1.1em;
+            height: 1.1em;
+        }
+
+        .content {
+            /*width: 960px;*/
+            margin: auto;
+            /*background-color: #fff;*/
+        }
+
+        #tTbl {
+            background-color: #fff;
+        }
+
+        dt {
+            display: inline-block;
+            color: #2e87c7;
+        }
+
+        dd {
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 15px;
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        .infoD {
+            padding: 0 0 10px;
+        }
+        /*h1:nth-of-type(2n+1) {
+            background-color: #1f5d8b;
+            color: #fff;
+        }
+
+        .infoD:nth-of-type(2n+1) {
+            background-color: #1f5d8b;
+            color: #fff;
+        }*/
+
+        table {
+            border-collapse: collapse;
+            margin: 0 0 20px;
+        }
+
+        td,
+        th {
+            vertical-align: top;
+            font-size: 0.9em;
+            text-align: left;
+            padding: 2px;
+            border: solid 1px #ddd;
+        }
+
+        .smallTitle {
+            color: #666;
+        }
+
+        .day {
+            width: 300px;
+            background-color: #fff;
+            display: inline-block;
+            font-size: 0.8em;
+            margin: 0 10px 10px 0;
+            vertical-align: top;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .code {
+            float: right;
+            display: inline-block;
+            margin-left: 10px;
+            background-color: #2e87c7;
+            color: #fff;
+            margin-top: 10px;
+            padding: 3px;
+            border-radius: 2px;
+        }
+
+        .level1 {
+            background-color: #d1fcd1;
+        }
+
+        .level2 {
+            background-color: #add3ee;
+        }
+
+        .level3 {
+            background-color: #ebdd91;
+        }
+
+        .level4 {
+            background-color: #ebb5b5;
+        }
+
+        #legend {
+            margin: 0 0 30px;
+            background-color: #fff;
+        }
+
+        .legendBlock {
+            width: 100px;
+            display: inline-block;
+        }
+
+        .training {
+            padding: 5px 10px;
+        }
+
+            .training:target {
+                background-color: #1f5d8b;
+                color: #fff;
+            }
+
+                .training:target h2,
+                .training:target dt {
+                    color: #fff;
+                }
+    </style>
+    <title>Map with valid credentials</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+    <script type="text/javascript">
+        var locations = [];
+        var addLocation = function (pack, code, trainingType, distance, location, order, mapName, controls, contours, scale) {
+            locations.push({
+                pack: pack,
+                code: code,
+                trainingType: trainingType,
+                distance: distance,
+                location: location,
+                order: order,
+                mapName: mapName,
+                controls: controls,
+                contours: contours,
+                scale: scale
+            });
+        };
+
+        addLocation('ALICANTE', '01', 'Middle', '7500', '38.1398, -0.63684', '1', 'Marina (Guardamar Norte)', '20', '2,5', '1:7.500');
+        addLocation('ALICANTE', '02', 'Short', '2700', '38.1398, -0.63684', '2', 'Marina (Guardamar Norte)', '11', '2,5', '1:5000');
+        addLocation('ALICANTE', '03', 'One man relay', '6500', '38.1398, -0.63684', '3', 'Guardamar Norte', '19', '2,5', '1:7.500');
+        addLocation('ALICANTE', '04', 'Star (3 loops)', '6100', '38.1398, -0.63684', '4', 'Guardamar Norte', '16', '2,5', '1:7.500');
+        addLocation('ALICANTE', '05', 'N-Course', '3700', '38.1398, -0.63684', '5', 'Guardamar Norte', '9', '2,5', '1:7.500');
+        addLocation('ALICANTE', '06', 'Night relay', '6600', '38.1398, -0.63684', '6', 'Guardamar Norte', '16', '2,5', '1:7.500');
+        addLocation('ALICANTE', '07', '10 INTERVALS', '5800', '', '7', 'Guardamar Norte', '38', '2,5', '1:7.500');
+        addLocation('ALICANTE', '08', 'Control picking', '8700', '', '8', 'Guardamar Norte', '60', '2,5', '1:7.500');
+        addLocation('ALICANTE', '09', 'Corridor', '5900', '', '9', 'Guardamar Norte', '25', '2,5', '1:7.500');
+        addLocation('ALICANTE', '10', 'One man relay', '7200', '', '10', 'Guardamar Norte', '25', '2,5', '1:7.500');
+        addLocation('ALICANTE', '11', 'Långa natten', '11800', '', '11', 'Guardamar Norte', '25', '2,5', '1:10.000');
+        addLocation('ALICANTE', '12', 'Short', '3600', '', '12', 'Guardamar Norte', '8', '2,5', '1:5.000');
+
+        addLocation('ALICANTE', '13', 'Middle (kurvbild)', '5900', '38.090196,-0.649855', '15', 'Guardamar Middle', '15', '2,5', '1:7.500');
+        addLocation('ALICANTE', '14', 'One man relay', '4700', '38.108186,-0.652364', '16', 'Guardamar Middle', '17', '2,5', '1:7.500');
+        addLocation('ALICANTE', '15', 'Intervall', '5400', '38.090196,-0.649855', '17', 'Guardamar Middle', '13', '2,5', '1:7.500');
+        //addLocation('ALICANTE', '16', 'Middle (kurvbild)', '5900', '38.090196,-0.649855', '18', 'Guardamar Middle', '15', '2,5', '1:7.500');
+
+        addLocation('ALICANTE', '17', 'One man relay', '6600', '38.048326,-0.656899', '17', 'Guardamar Middle', '18', '2,5', '1:7.500');
+        addLocation('ALICANTE', '18', 'Intervals', '5400', '38.048326,-0.656899', '18', 'Guardamar Middle', '20', '2,5', '1:7.500');
+        addLocation('ALICANTE', '19', 'Fast/Slow', '9500', '38.048326,-0.656899', '19', 'Guardamar Middle', '13', '2,5', '1:7.500');
+        addLocation('ALICANTE', '20', 'Short', '3200', '38.048326,-0.656899', '20', 'Guardamar Middle', '12', '2,5', '1:7.500');
+
+
+        addLocation('ALICANTE', '21', 'Middle', '7600', '38.145149,-0.661229', '21', 'El Molar', '18', '2,5', '1:10000');
+
+        addLocation('ALICANTE', '22', 'Long', '9400', '38.220049,-0.552359', '22', 'Santa Pola', '32', '2,5', '1:7.500');
+
+
+        addLocation('ALICANTE', '23', 'Long (Control picking)', '9400', '38.664371,-0.981672', '23', 'La Toconera, Caudete', '41', '5', '1:10.000');
+        addLocation('ALICANTE', '24', 'Long (Control picking)', '8900', '38.548358,-0.837946', '24', 'Sax', '45', '5', '1:10.000');
+        addLocation('ALICANTE', '25', 'Long', '10000', '38.591612,-1.146830', '25', 'Yecla', '49', '5', '1:10.000');
+        addLocation('ALICANTE', '27', '2 sprints', '2,2 + 2,4', '38.632680,-0.859538', '27', 'Villena', '30', '5', '1:4.000');
+
+        addLocation('ALICANTE', '28', 'Middle', '4500', '38.602706,-0.801805', '28', 'Peñarubia', '23', '5', '1:7.500');
+        addLocation('ALICANTE', '29', 'Long', '10000', '38.075272,-1.101771', '29', 'Coto cuadros', '13', '5', '1:10.000');
+
+        addLocation('ALICANTE', '30', 'Middle', '6600', '38.134622,-1.731448', '30', 'Coto de las Maravillas', '29', '5', '1:10.000');
+        addLocation('ALICANTE', '31', 'Middle', '5200', '38.133494,-1.693672', '31', 'Coto de las Maravillas', '18', '5', '1:10.000');
+
+        addLocation('ALICANTE', '32', 'Sprint', '2300', '38.1067403,-1.8592547', '32', 'Caravaca', '19', '5', '1:4.000');
+
+        addLocation('ALICANTE', '35', 'Sprint', '2100', '38.921764,-1.722088', '35', 'Chinchilla.', '16', '5', '1:4.000');
+
+
+        var days = [];
+        var addDay = function (name, fm, em, night, intenseties) {
+            days.push({ name: name, fm: fm, em: em, night: night, intenseties: intenseties });
+        };
+        addDay('11 Lördag', '', '10', '12', [0,2,1]);
+        addDay('12 Söndag', '05', '22', '', [4, 1, 0]);
+        addDay('13 Måndag', '23', '27', '24', [1, 3, 1]);
+        addDay('14 Tisdag', '', '19', '11', [0, 1, 1]);
+        addDay('15 Onsdag', '15', '01', '', [3, 1, 0]);
+        addDay('16 Torsdag', '30', '32', '31', [1, 3, 1]);
+        addDay('17 Fredag', '21', '17', '', [1, 3, 0]);
+        addDay('18 Lördag', '03', '', '', [2, 0, 0]);
+
+        function buildTraining(training, timeOnDay, description) {
+            var title = "Vila";
+            var trainingInfo = null;
+            var code = '';
+            if (training) {
+                code = training.code;
+                title = training.trainingType;
+
+                var coords = training.location.split(',');
+
+                trainingInfo = "<section class='infoC'>"
+                    + "<div class='info'>"
+                       + "<dl>"
+        + "<dt>Längd</dt>"
+        + "<dd>" + training.distance + "m</dd>"
+        + "<dt>Skala</dt>"
+        + "<dd>" + training.scale + "</dd>"
+                    + "<dt>Plats</dt>"
+        + "<dd>" + training.location + "</dd>"
+            + "<dt>Karta</dt>"
+        + "<dd>" + training.mapName + "</dd>"
+
+    + "</dl>"
+                    + "</div>"
+                                    + "<div class='map'>"
+                        + "<img src='http://maps.googleapis.com/maps/api/staticmap?zoom=10&size=280x180&maptype=roadmap&markers=color:blue%7Clabel:S%7C" + coords[0] + "," + coords[1] + "&sensor=true' alt='' />"
+                    + "</div>"
+                + "</div></section>";
+            }
+
+            var html = "<section class='training' id='" + code + "'><h2>" + timeOnDay + ":" + title + "</h2>";
+
+            html += "<span class='code'>" + code + "</span>";
+
+            if (trainingInfo) {
+                html += trainingInfo;
+            }
+
+            return html + "</section>";
+        }
+
+        var buildHtml = function () {
+
+            var dayRow = document.getElementById('days');
+            var fmRow = document.getElementById('fms');
+            var emRow = document.getElementById('ems');
+            var nightRow = document.getElementById('nights');
+            for (var i = 0; i < days.length; i++) {
+                var day = days[i];
+
+                var dayHeader = document.createElement('th');
+                dayHeader.innerText = day.name;
+                dayRow.appendChild(dayHeader);
+                var getTraining = function (code) {
+                    return locations.filter(function (t) { return t.code == code; })[0];
+                };
+                var buildTableHtml = function (fmTraining) {
+                    if (!fmTraining) { return ''; }
+                    return "<a href='#" + fmTraining.code + "'>" + fmTraining.code + "</a><br />" + fmTraining.distance + "m<br /><span class='smallTitle'>" + fmTraining.trainingType + "</span>";
+                };
+
+                var setIntesity = function (training, intesity, col) {
+                    if (!training) {
+                        return;
+                    }
+                    training.intensety = intesity;
+                    col.classList.add("level" + training.intensety);
+                };
+
+                var fmCol = document.createElement('td');
+                var fmTraining = getTraining(day.fm);
+                setIntesity(fmTraining, day.intenseties[0], fmCol);
+
+                fmCol.innerHTML = buildTableHtml(fmTraining);
+
+                fmRow.appendChild(fmCol);
+
+                var emCol = document.createElement('td');
+                var emTraining = getTraining(day.em);
+                setIntesity(emTraining, day.intenseties[1], emCol);
+                emCol.innerHTML = buildTableHtml(emTraining);
+
+                emRow.appendChild(emCol);
+
+                var nightCol = document.createElement('td');
+                var nightTraining = getTraining(day.night);
+                setIntesity(nightTraining, day.intenseties[2], nightCol);
+
+                nightCol.innerHTML = buildTableHtml(nightTraining);
+
+                nightRow.appendChild(nightCol);
+
+                var dayCard = document.createElement('section');
+                dayCard.classList.add("day");
+
+                var node = document.createElement('h1');
+                node.textContent = day.name;
+                node.classList.add('trainingDay');
+                document.getElementById('content').appendChild(node);
+                node.parentElement.insertBefore(dayCard, node);
+                dayCard.appendChild(node);
+
+                var dayInfo = document.createElement('div');
+                dayInfo.classList.add("infoD");
+
+                dayInfo.innerHTML = buildTraining(fmTraining, "FM", node.getAttribute("data-fmdesc"))
+                + buildTraining(emTraining, "EM", node.getAttribute("data-emdesc"))
+                + buildTraining(nightTraining, "Night", node.getAttribute("data-nightdesc"));
+
+                dayCard.appendChild(dayInfo);
+            }
+        }
+
+
+        var map = null;
+
+        function getMap() {
+            map = new Microsoft.Maps.Map(document.getElementById('myMap'), { credentials: 'AoueAZSQvSja6nXRyts_1y0SJtMc3KYEe6Dusm_j9xwWj6OdQnF4KuZgByb6z479' });
+            for (var i = 0; i < locations.length; i++) {
+                var location = locations[i];
+                var coords = location.location.split(',');
+                var pushpinOptions = { text: location.code };
+                var pushpin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(coords[0], coords[1]), pushpinOptions);
+                map.entities.push(pushpin);
+            }
+            buildHtml();
+        }
+    </script>
+</head>
+
+<body onload="getMap();">
+    <div id='myMap' style="position:relative; width:400px; height:400px;"></div>
+
+    <div id="content" class="content">
+        <table id="tTbl">
+            <thead>
+                <tr id="days">
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="fms">
+                    <th>FM</th>
+                </tr>
+                <tr id="ems">
+                    <th>EM</th>
+                </tr>
+                <tr id="nights">
+                    <th>N</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="legend">
+            <div class="legendBlock level1">Lugn</div>
+            <div class="legendBlock level2">Moderat</div>
+            <div class="legendBlock level3">Hög</div>
+            <div class="legendBlock level4">Tävlingsfart</div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
