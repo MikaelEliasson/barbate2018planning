@@ -169,12 +169,12 @@
         addLocation('ALICANTE', '04', 'Star (3 loops)', '6100', '38.1398, -0.63684', '4', 'Guardamar Norte', '16', '2,5', '1:7.500');
         addLocation('ALICANTE', '05', 'N-Course', '3700', '38.1398, -0.63684', '5', 'Guardamar Norte', '9', '2,5', '1:7.500');
         addLocation('ALICANTE', '06', 'Night relay', '6600', '38.1398, -0.63684', '6', 'Guardamar Norte', '16', '2,5', '1:7.500');
-        addLocation('ALICANTE', '07', '10 INTERVALS', '5800', '', '7', 'Guardamar Norte', '38', '2,5', '1:7.500');
-        addLocation('ALICANTE', '08', 'Control picking', '8700', '', '8', 'Guardamar Norte', '60', '2,5', '1:7.500');
-        addLocation('ALICANTE', '09', 'Corridor', '5900', '', '9', 'Guardamar Norte', '25', '2,5', '1:7.500');
-        addLocation('ALICANTE', '10', 'One man relay', '7200', '', '10', 'Guardamar Norte', '25', '2,5', '1:7.500');
-        addLocation('ALICANTE', '11', 'Långa natten', '11800', '', '11', 'Guardamar Norte', '25', '2,5', '1:10.000');
-        addLocation('ALICANTE', '12', 'Short', '3600', '', '12', 'Guardamar Norte', '8', '2,5', '1:5.000');
+        addLocation('ALICANTE', '07', '10 INTERVALS', '5800', '38.109425,-0.654615', '7', 'Guardamar Norte', '38', '2,5', '1:7.500');
+        addLocation('ALICANTE', '08', 'Control picking', '8700', '38.109425,-0.654615', '8', 'Guardamar Norte', '60', '2,5', '1:7.500');
+        addLocation('ALICANTE', '09', 'Corridor', '5900', '38.109425,-0.654615', '9', 'Guardamar Norte', '25', '2,5', '1:7.500');
+        addLocation('ALICANTE', '10', 'One man relay', '7200', '38.109425,-0.654615', '10', 'Guardamar Norte', '25', '2,5', '1:7.500');
+        addLocation('ALICANTE', '11', 'Långa natten', '11800', '38.109425,-0.654615', '11', 'Guardamar Norte', '25', '2,5', '1:10.000');
+        addLocation('ALICANTE', '12', 'Short', '3600', '38.109425,-0.654615', '12', 'Guardamar Norte', '8', '2,5', '1:5.000');
 
         addLocation('ALICANTE', '13', 'Middle (kurvbild)', '5900', '38.090196,-0.649855', '15', 'Guardamar Middle', '15', '2,5', '1:7.500');
         addLocation('ALICANTE', '14', 'One man relay', '4700', '38.108186,-0.652364', '16', 'Guardamar Middle', '17', '2,5', '1:7.500');
@@ -246,7 +246,7 @@
     + "</dl>"
                     + "</div>"
                                     + "<div class='map'>"
-                        + "<img src='//maps.googleapis.com/maps/api/staticmap?zoom=10&size=280x180&maptype=roadmap&markers=color:blue%7Clabel:S%7C" + coords[0] + "," + coords[1] + "&sensor=true' alt='' />"
+                        + "<a href='https://www.google.com/maps/place/" + coords[0] + "," + coords[1] + " target='_blank'>'<img src='//maps.googleapis.com/maps/api/staticmap?zoom=10&size=280x180&maptype=roadmap&markers=color:blue%7Clabel:S%7C" + coords[0] + "," + coords[1] + "&sensor=true' alt='' /></a>"
                     + "</div>"
                 + "</div></section>";
             }
