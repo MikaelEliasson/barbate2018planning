@@ -119,7 +119,7 @@
             background-color: #ebb5b5;
         }
 
-        .level10,.levelundefined, .levelnull {
+        .level10, .levelundefined, .levelnull {
             background-color: #eee;
         }
 
@@ -221,6 +221,9 @@
         addLocation('ALICANTE', '35', 'Sprint', '2100', '38.921764,-1.722088', '35', 'Chinchilla.', '16', '5', '1:4.000');
 
 
+        addLocation('ALICANTE', 'SI2', 'Middle (SI-race)', '6100', '38.09057, -0.65025', '10', 'Guardamar', '20', '2.5', '1:7.500');
+
+
         var days = [];
         var addDay = function (name) {
             var d = { name: name, sessions: [] };
@@ -288,32 +291,37 @@
         addDay('14 Tisdag')
         //.addSession(10, 12, 'FM', '05', 4)
         .addSession(15, 17, 'EM', '19', 1)
-        .addSession(19, 20, 'middag', null, 10)
-        .addSession(20, 22, 'Night', '40', 1, 'Extrapass för de som vill träna mer');
+        .addSession(17, 17.5, 'Tävling 3 + 4 på beachen')
+        .addSession(19, 20, 'Night', '41', 2, 'SI-racee')
+        .addSession(20, 21, 'middag', null, 10);
 
 
 
 
         addDay('15 Onsdag')
         //.addSession(10, 12, 'FM', '05', 4)
-        .addSession(10, 12, 'FM', '15', 3)
+        .addSession(10, 10.5, 'Till träning (5 min)')
+        .addSession(10.5, 12, 'FM', 'SI2', 3)
         .addSession(16, 18, 'EM', '01', 1)
-        .addSession(19, 20, 'middag', null, 10);
+        .addSession(19, 20, 'middag', null, 10)
+        .addSession(20, 20.30, 'tävling');
 
         addDay('16 Torsdag')
-            .addSession(7.5, 9, 'Resa')
+            .addSession(8, 9, 'Resa')
         .addSession(9, 10, 'FM', '23', 1)
         .addSession(12, 13, 'T2', '27', 3)
-        .addSession(16.5, 18, 'EM', '24', 1)
-        .addSession(18, 19.5, 'Resa')
-        .addSession(20, 21, 'middag', null, 10);
+        .addSession(14, 15, 'Tävling')
+        .addSession(16, 18, 'EM', '24', 1)
+        .addSession(18, 19, 'Resa')
+        .addSession(19, 20, 'middag', null, 10);
 
 
         addDay('17 Fredag')
         //.addSession(10, 12, 'FM', '05', 4)
         .addSession(10, 12, 'FM', '05', 4)
-        .addSession(16, 18, 'EM', '17', 1)
-        .addSession(19, 20, 'middag', null, 10);
+        .addSession(16, 18, 'EM', '22', 1)
+        .addSession(19, 20, 'middag')
+        .addSession(20, 20.5, 'tävling');
 
 
         addDay('18 Lördag')
