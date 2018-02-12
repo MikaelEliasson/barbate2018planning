@@ -157,7 +157,7 @@
     </style>
     <title>Map with valid credentials</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="//ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&s=1"></script>
+    <script type="text/javascript" src="https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&s=1"></script>
     <script type="text/javascript">
         var locations = [];
         var addLocation = function (pack, code, trainingType, distance, location, order, mapName, controls, contours, scale) {
@@ -174,54 +174,95 @@
                 scale: scale
             });
         };
-
-        addLocation('ALICANTE', '01', 'Middle', '7500', '38.1398, -0.63684', '1', 'Marina (Guardamar Norte)', '20', '2,5', '1:7.500');
-        addLocation('ALICANTE', '02', 'Short', '2700', '38.1398, -0.63684', '2', 'Marina (Guardamar Norte)', '11', '2,5', '1:5000');
-        addLocation('ALICANTE', '03', 'One man relay', '6500', '38.1398, -0.63684', '3', 'Guardamar Norte', '19', '2,5', '1:7.500');
-        addLocation('ALICANTE', '04', 'Star (3 loops)', '6100', '38.1398, -0.63684', '4', 'Guardamar Norte', '16', '2,5', '1:7.500');
-        addLocation('ALICANTE', '05', 'N-Course', '3700', '38.1398, -0.63684', '5', 'Guardamar Norte', '9', '2,5', '1:7.500');
-        addLocation('ALICANTE', '06', 'Night relay', '6600', '38.1398, -0.63684', '6', 'Guardamar Norte', '16', '2,5', '1:7.500');
-        addLocation('ALICANTE', '07', '10 INTERVALS', '5800', '38.109425,-0.654615', '7', 'Guardamar Norte', '38', '2,5', '1:7.500');
-        addLocation('ALICANTE', '08', 'Control picking', '8700', '38.109425,-0.654615', '8', 'Guardamar Norte', '60', '2,5', '1:7.500');
-        addLocation('ALICANTE', '09', 'Corridor', '5900', '38.109425,-0.654615', '9', 'Guardamar Norte', '25', '2,5', '1:7.500');
-        addLocation('ALICANTE', '10', 'One man relay', '7200', '38.109425,-0.654615', '10', 'Guardamar Norte', '25', '2,5', '1:7.500');
-        addLocation('ALICANTE', '11', 'Långa natten', '11800', '38.109425,-0.654615', '11', 'Guardamar Norte', '25', '2,5', '1:10.000');
-        addLocation('ALICANTE', '12', 'Short', '3600', '38.109425,-0.654615', '12', 'Guardamar Norte', '8', '2,5', '1:5.000');
-        addLocation('ALICANTE', '40', 'Kurvbild + kontrollplock', '8800', '38.109425,-0.654615', '12', 'Guardamar Norte', '60', '2,5', '1:5.000');
-
-        addLocation('ALICANTE', '13', 'Middle (kurvbild)', '5900', '38.090196,-0.649855', '15', 'Guardamar Middle', '15', '2,5', '1:7.500');
-        addLocation('ALICANTE', '14', 'One man relay', '4700', '38.108186,-0.652364', '16', 'Guardamar Middle', '17', '2,5', '1:7.500');
-        addLocation('ALICANTE', '15', 'Intervall', '5400', '38.090196,-0.649855', '17', 'Guardamar Middle', '13', '2,5', '1:7.500');
-        //addLocation('ALICANTE', '16', 'Middle (kurvbild)', '5900', '38.090196,-0.649855', '18', 'Guardamar Middle', '15', '2,5', '1:7.500');
-
-        addLocation('ALICANTE', '17', 'One man relay', '6600', '38.048326,-0.656899', '17', 'Guardamar Middle', '18', '2,5', '1:7.500');
-        addLocation('ALICANTE', '18', 'Intervals', '5400', '38.048326,-0.656899', '18', 'Guardamar Middle', '20', '2,5', '1:7.500');
-        addLocation('ALICANTE', '19', 'Fast/Slow', '9500', '38.048326,-0.656899', '19', 'Guardamar Middle', '13', '2,5', '1:7.500');
-        addLocation('ALICANTE', '20', 'Short', '3200', '38.048326,-0.656899', '20', 'Guardamar Middle', '12', '2,5', '1:7.500');
+		
+//'00' 	,'City/Forest Sprint'  	,'3,0k' 		,'36.185361, -6.008900', 'Caños de Meca' 			,'2,5 m'	'1:5000 ', asphalt, soft soil 				00:00
+//'01' 	,'City Sprint' 			,'2,3 (4,1)k' 	,'36.254856, -5.967937', 'Vejer de la Frontera' 	,'5 m ',	'1:5000 ', asphalt, grass in parks 			00:20
+//'02' 	,'Middle' 				,'7,4k' 		,'36.193689, -5.993832', 'La Breña- Barbate' 		,'2,5 m'	'1:10000', soft soil-easy run 				00:03
+//'03' 	,'Multitechniques' 		,'11,4k' 		,'36.196785, -5.981553', 'La Breña- Barbate' 		,'2,5 m'	'1:10000', soft soil-easy run 				00:05
+//'04' 	,'Long' 				,'16,6k' 		,'36.187109, -6.008064', 'La Breña- Barbate' 		,'2,5 m'	'1:10000', soft soil-easy run 				00:00
+//'05' 	,'Middle (Mass start)'  ,'6,8k' 		,'36.200353, -5.951827', 'La Breña- Barbate' 		,'2,5 m'	'1:10000', soft soil-easy run 				00:13
+//'06' 	,'Middle (Mass start)'  ,'5,0k' 		,'36.205301, -5.992649', 'La Breña- Barbate' 		,'2,5 m'	'1:10000', soft soil-easy run 				00:09
+//'07' 	,'Forest Sprint' 		,'2,9k' 		,'36.205301, -5.992649', 'La Breña- Barbate' 		,'2,5 m'	'1:5000 ', soft soil-easy run 				00:09
+//'08' 	,'Long' 				,'7,4k' 		,'36.080433, -5.759603', 'El Lentiscal' 			,'2,5 m'	'1:10000', sandy soil-medium run 			00:45
+//'09' 	,'City (long) Sprint'	,'4,3k' 		,'36.453871, -5.926418', 'Medina Sidonia' 			,'2,5 m'	'1:5000 ', asphalt, grass in parks 			00:37
+//'10' 	,'Interval'				,'8,7k' 		,'36.200353, -5.951827', 'La Breña- Barbate' 		,'2,5 m'	'1:10000', soft soil-easy run 				00:13
+//'11' 	,'City Sprint' 			,'2,1 (3,9)k' 	,'36.276039, -6.092911', 'Conil de la Frontera' 	,'5 m ',	'1:4000 ', asphalt, grass in parks 			00:23
+//'12' 	,'Downhills' 			,'11,4k' 		,'36.200353, -5.951827', 'La Breña- Barbate' 		,'2,5 m'	'1:10000', soft soil-easy run 				00:13
+//'13' 	,'Relay'  				,'6,7k' 		,'36.193689, -5.993832', 'La Breña- Barbate' 		,'2,5 m'	'1:10000', soft soil-easy run 				00:03
+//'14' 	,'Middle' 				,'6,6k' 		,'36.200548, -6.017977', 'La Breña- Barbate' 		,'2,5 m'	'1:10000', soft soil-easy run 				00:06
+//'15' 	,'Middle' 				,'7,7k' 		,'36.331953, -6.159592', 'Roche' 					,'2,5 m'	'1:10000', soft soil-easy run 				00:37
+//'16' 	,'Middle' 				,'5,0k' 		,'36.080469, -5.759523', 'Lentiscal' 				,'5 m ',	'1:10000', sandy to hard soil- good run 	00:45
+//'000'	,'Middle' 				,'4,0k' 		,'36.087330, -5.770076', 'Bolonia Este' 			,'5 m ',	'1:7500 ', sandy soil-medium run 			00:51
 
 
-        addLocation('ALICANTE', '21', 'Middle', '7600', '38.145149,-0.661229', '21', 'El Molar', '18', '2,5', '1:10000');
+		
+		
+		
+		addLocation('BAR', '00' 	,'City/Forest Sprint'  	,'3,0k' 		,'36.185361, -6.008900', '1' 	,'Caños de Meca' 			,'1' ,'2,5 m'	,'1:5000 ');
+		addLocation('BAR', '01' 	,'City Sprint' 			,'2,3 (4,1)k' 	,'36.254856, -5.967937', '2' 	,'Vejer de la Frontera' 	,'1' ,'5 m ' 	,'1:5000 ');
+		addLocation('BAR', '02' 	,'Middle' 				,'7,4k' 		,'36.193689, -5.993832', '3' 	,'La Breña- Barbate' 		,'1' ,'2,5 m'	,'1:10000');
+		addLocation('BAR', '03' 	,'Multitechniques' 		,'11,4k' 		,'36.196785, -5.981553', '4' 	,'La Breña- Barbate' 		,'1' ,'2,5 m'	,'1:10000');
+		addLocation('BAR', '04' 	,'Long' 				,'16,6k' 		,'36.187109, -6.008064', '5' 	,'La Breña- Barbate' 		,'1' ,'2,5 m'	,'1:10000');
+		addLocation('BAR', '05' 	,'Middle (Mass start)'  ,'6,8k' 		,'36.200353, -5.951827', '6' 	,'La Breña- Barbate' 		,'1' ,'2,5 m'	,'1:10000');
+		addLocation('BAR', '06' 	,'Middle (Mass start)'  ,'5,0k' 		,'36.205301, -5.992649', '7' 	,'La Breña- Barbate' 		,'1' ,'2,5 m'	,'1:10000');
+		addLocation('BAR', '07' 	,'Forest Sprint' 		,'2,9k' 		,'36.205301, -5.992649', '8' 	,'La Breña- Barbate' 		,'1' ,'2,5 m'	,'1:5000 ');
+		addLocation('BAR', '08' 	,'Long' 				,'7,4k' 		,'36.080433, -5.759603', '9' 	,'El Lentiscal' 			,'1' ,'2,5 m'	,'1:10000');
+		addLocation('BAR', '09' 	,'City (long) Sprint'	,'4,3k' 		,'36.453871, -5.926418', '10' 	,'Medina Sidonia' 			,'1' ,'2,5 m'	,'1:5000 ');
+		addLocation('BAR', '10' 	,'Interval'				,'8,7k' 		,'36.200353, -5.951827', '11' 	,'La Breña- Barbate' 		,'1' ,'2,5 m'	,'1:10000');
+		addLocation('BAR', '11' 	,'City Sprint' 			,'2,1 (3,9)k' 	,'36.276039, -6.092911', '12' 	,'Conil de la Frontera' 	,'1' ,'5 m ' 	,'1:4000 ');
+		addLocation('BAR', '12' 	,'Downhills' 			,'11,4k' 		,'36.200353, -5.951827', '13' 	,'La Breña- Barbate' 		,'1' ,'2,5 m'	,'1:10000');
+		addLocation('BAR', '13' 	,'Relay'  				,'6,7k' 		,'36.193689, -5.993832', '14' 	,'La Breña- Barbate' 		,'1' ,'2,5 m'	,'1:10000');
+		addLocation('BAR', '14' 	,'Middle' 				,'6,6k' 		,'36.200548, -6.017977', '15' 	,'La Breña- Barbate' 		,'1' ,'2,5 m'	,'1:10000');
+		addLocation('BAR', '15' 	,'Middle' 				,'7,7k' 		,'36.331953, -6.159592', '16' 	,'Roche' 					,'1' ,'2,5 m'	,'1:10000');
+		addLocation('BAR', '16' 	,'Middle' 				,'5,0k' 		,'36.080469, -5.759523', '17' 	,'Lentiscal' 				,'1' ,'5 m ' 	,'1:10000');
+		addLocation('BAR', '000'	,'Middle' 				,'4,0k' 		,'36.087330, -5.770076', '18' 	,'Bolonia Este' 			,'1' ,'5 m ' 	,'1:7500 ');
+		
+		
 
-        addLocation('ALICANTE', '22', 'Long', '9400', '38.220049,-0.552359', '22', 'Santa Pola', '32', '2,5', '1:7.500');
-
-
-        addLocation('ALICANTE', '23', 'Long (Control picking)', '9400', '38.664371,-0.981672', '23', 'La Toconera, Caudete', '41', '5', '1:10.000');
-        addLocation('ALICANTE', '24', 'Long (Control picking)', '8900', '38.548358,-0.837946', '24', 'Sax', '45', '5', '1:10.000');
-        addLocation('ALICANTE', '25', 'Long', '10000', '38.591612,-1.146830', '25', 'Yecla', '49', '5', '1:10.000');
-        addLocation('ALICANTE', '27', '2 sprints (2,2km + 2,4km)', '4600', '38.632680,-0.859538', '27', 'Villena', '30', '5', '1:4.000');
-
-        addLocation('ALICANTE', '28', 'Middle', '4500', '38.602706,-0.801805', '28', 'Peñarubia', '23', '5', '1:7.500');
-        addLocation('ALICANTE', '29', 'Long', '10000', '38.075272,-1.101771', '29', 'Coto cuadros', '13', '5', '1:10.000');
-
-        addLocation('ALICANTE', '30', 'Middle', '6600', '38.134622,-1.731448', '30', 'Coto de las Maravillas', '29', '5', '1:10.000');
-        addLocation('ALICANTE', '31', 'Middle', '5200', '38.133494,-1.693672', '31', 'Coto de las Maravillas', '18', '5', '1:10.000');
-
-        addLocation('ALICANTE', '32', 'Sprint', '2300', '38.1067403,-1.8592547', '32', 'Caravaca', '19', '5', '1:4.000');
-
-        addLocation('ALICANTE', '35', 'Sprint', '2100', '38.921764,-1.722088', '35', 'Chinchilla.', '16', '5', '1:4.000');
-
-
-        addLocation('ALICANTE', 'SI2', 'Middle (SI-race)', '6100', '38.09057, -0.65025', '10', 'Guardamar', '20', '2.5', '1:7.500');
+        //addLocation('BARBATE', '00', 'Middle', '7500', '38.1398, -0.63684', '1', 'Marina (Guardamar Norte)', '20', '2,5', '1:7.500'); //NO TAPES
+        //addLocation('BARBATE', '01', 'Short', '2700', '38.1398, -0.63684', '2', 'Marina (Guardamar Norte)', '11', '2,5', '1:5000');
+        //addLocation('BARBATE', '02', 'One man relay', '6500', '38.1398, -0.63684', '3', 'Guardamar Norte', '19', '2,5', '1:7.500');
+        //addLocation('BARBATE', '03', 'Star (3 loops)', '6100', '38.1398, -0.63684', '4', 'Guardamar Norte', '16', '2,5', '1:7.500');
+        //addLocation('BARBATE', '04', 'N-Course', '3700', '38.1398, -0.63684', '5', 'Guardamar Norte', '9', '2,5', '1:7.500');
+        //addLocation('BARBATE', '05', 'Night relay', '6600', '38.1398, -0.63684', '6', 'Guardamar Norte', '16', '2,5', '1:7.500');
+        //addLocation('BARBATE', '06', '10 INTERVALS', '5800', '38.109425,-0.654615', '7', 'Guardamar Norte', '38', '2,5', '1:7.500');
+        //addLocation('BARBATE', '07', 'Control picking', '8700', '38.109425,-0.654615', '8', 'Guardamar Norte', '60', '2,5', '1:7.500');
+        //addLocation('BARBATE', '08', 'Corridor', '5900', '38.109425,-0.654615', '9', 'Guardamar Norte', '25', '2,5', '1:7.500');
+        //addLocation('BARBATE', '09', 'One man relay', '7200', '38.109425,-0.654615', '10', 'Guardamar Norte', '25', '2,5', '1:7.500');
+        //addLocation('BARBATE', '10', 'Långa natten', '11800', '38.109425,-0.654615', '11', 'Guardamar Norte', '25', '2,5', '1:10.000');
+        //addLocation('BARBATE', '11', 'Short', '3600', '38.109425,-0.654615', '12', 'Guardamar Norte', '8', '2,5', '1:5.000');
+        //addLocation('BARBATE', '12', 'Kurvbild + kontrollplock', '8800', '38.109425,-0.654615', '12', 'Guardamar Norte', '60', '2,5', '1:5.000');
+        //
+        //addLocation('BARBATE', '13', 'Middle (kurvbild)', '5900', '38.090196,-0.649855', '15', 'Guardamar Middle', '15', '2,5', '1:7.500');
+        //addLocation('BARBATE', '14', 'One man relay', '4700', '38.108186,-0.652364', '16', 'Guardamar Middle', '17', '2,5', '1:7.500');
+        //addLocation('BARBATE', '15', 'Intervall', '5400', '38.090196,-0.649855', '17', 'Guardamar Middle', '13', '2,5', '1:7.500');
+        //addLocation('BARBATE', '16', 'Middle (kurvbild)', '5900', '38.090196,-0.649855', '18', 'Guardamar Middle', '15', '2,5', '1:7.500');
+        //
+        //addLocation('BARBATE', '000', 'One man relay', '6600', '38.048326,-0.656899', '17', 'Guardamar Middle', '18', '2,5', '1:7.500');
+        //
+        //
+        //addLocation('BARBATE', '21', 'Middle', '7600', '38.145149,-0.661229', '21', 'El Molar', '18', '2,5', '1:10000');
+        //
+        //addLocation('BARBATE', '22', 'Long', '9400', '38.220049,-0.552359', '22', 'Santa Pola', '32', '2,5', '1:7.500');
+        //
+        //
+        //addLocation('BARBATE', '23', 'Long (Control picking)', '9400', '38.664371,-0.981672', '23', 'La Toconera, Caudete', '41', '5', '1:10.000');
+        //addLocation('BARBATE', '24', 'Long (Control picking)', '8900', '38.548358,-0.837946', '24', 'Sax', '45', '5', '1:10.000');
+        //addLocation('BARBATE', '25', 'Long', '10000', '38.591612,-1.146830', '25', 'Yecla', '49', '5', '1:10.000');
+        //addLocation('BARBATE', '27', '2 sprints (2,2km + 2,4km)', '4600', '38.632680,-0.859538', '27', 'Villena', '30', '5', '1:4.000');
+        //
+        //addLocation('BARBATE', '28', 'Middle', '4500', '38.602706,-0.801805', '28', 'Peñarubia', '23', '5', '1:7.500');
+        //addLocation('BARBATE', '29', 'Long', '10000', '38.075272,-1.101771', '29', 'Coto cuadros', '13', '5', '1:10.000');
+        //
+        //addLocation('BARBATE', '30', 'Middle', '6600', '38.134622,-1.731448', '30', 'Coto de las Maravillas', '29', '5', '1:10.000');
+        //addLocation('BARBATE', '31', 'Middle', '5200', '38.133494,-1.693672', '31', 'Coto de las Maravillas', '18', '5', '1:10.000');
+        //
+        //addLocation('BARBATE', '32', 'Sprint', '2300', '38.1067403,-1.8592547', '32', 'Caravaca', '19', '5', '1:4.000');
+        //
+        //addLocation('BARBATE', '35', 'Sprint', '2100', '38.921764,-1.722088', '35', 'Chinchilla.', '16', '5', '1:4.000');
+        //
+        //
+        //addLocation('BARBATE', 'SI2', 'Middle (SI-race)', '6100', '38.09057, -0.65025', '10', 'Guardamar', '20', '2.5', '1:7.500');
 
 
         var days = [];
@@ -263,20 +304,20 @@
         //    };
         //};
 
-        addDay('11 Lördag')
+        addDay('18 Söndag')
             .addSession(16, 18, 'EM', '10', 2, 'Tänk på att flygresor sliter och satsa framförallt på att komma in i kartan')
             .addSession(22.5, 24, 'Natt', '12', 1, 'Kort passa på väg till flygplatsen för att hämta Agnes')
             .addSession(18, 19, 'Till affären', null, null, 'Handla för söndag lunch + måndag mellanmål + lunch')
             .addSession(19, 20, 'middag', null, 10);
 
-        addDay('12 Söndag')
+        addDay('19 Måndag')
         .addSession(10, 12, 'FM', '18', 3)
         .addSession(16.5, 17, '7-kamp (1)', null, null, 'Jogg till stranden där vi kör tävlingen')
         .addSession(17, 19, 'EM', '11', 1)
         .addSession(19, 20, 'middag', null, 10);
 
 
-        addDay('13 Måndag')
+        addDay('20 Tisdag')
         .addSession(8, 9.5, 'Resa')
         .addSession(9.5, 10.5, 'FM', '30', 1)
         .addSession(10.5, 11, 'Mellanmål')
@@ -288,7 +329,7 @@
 
 
 
-        addDay('14 Tisdag')
+        addDay('21 Onsdag')
         //.addSession(10, 12, 'FM', '05', 4)
         .addSession(15, 17, 'EM', '19', 1)
         .addSession(17, 17.5, 'Tävling 3 + 4 på beachen')
@@ -298,7 +339,7 @@
 
 
 
-        addDay('15 Onsdag')
+        addDay('22 Torsdag')
         //.addSession(10, 12, 'FM', '05', 4)
         .addSession(10, 10.5, 'Till träning (5 min)')
         .addSession(10.5, 12, 'FM', 'SI2', 3)
@@ -306,7 +347,7 @@
         .addSession(19, 20, 'middag', null, 10)
         .addSession(20, 20.30, 'tävling');
 
-        addDay('16 Torsdag')
+        addDay('23 Fredag')
             .addSession(8, 9, 'Resa')
         .addSession(9, 10, 'FM', '23', 1)
         .addSession(12, 13, 'T2', '27', 3)
@@ -316,7 +357,7 @@
         .addSession(19, 20, 'middag', null, 10);
 
 
-        addDay('17 Fredag')
+        addDay('24 Lördag')
         //.addSession(10, 12, 'FM', '05', 4)
         .addSession(10, 12, 'FM', '05', 4)
         .addSession(16, 18, 'EM', '22', 1)
@@ -324,28 +365,11 @@
         .addSession(20, 20.5, 'tävling');
 
 
-        addDay('18 Lördag')
+        addDay('25 Söndag')
         //.addSession(10, 12, 'FM', '05', 4)
         .addSession(8, 10, 'FM', '14', 2)
         .addSession(10, 16, 'Hemresa');
-
-        //, '', '10', '12', [0, 2, 1]);
-        //addDay('12 Söndag', '05', '22', '', [4, 1, 0]);
-        //addDay('13 Måndag', '23', '27', '24', [1, 3, 1]);
-        //addDay('14 Tisdag', '', '19', '11', [0, 1, 1]);
-        //addDay('15 Onsdag', '15', '01', '', [3, 1, 0]);
-        //addDay('16 Torsdag', '30', '32', '31', [1, 3, 1]);
-        //addDay('17 Fredag', '21', '17', '', [1, 3, 0]);
-        //addDay('18 Lördag', '03', '', '', [2, 0, 0]);
-
-        //addDay('11 Lördag', '', '10', '12', [0, 2, 1]);
-        //addDay('12 Söndag', '05', '22', '', [4, 1, 0]);
-        //addDay('13 Måndag', '23', '27', '24', [1, 3, 1]);
-        //addDay('14 Tisdag', '', '19', '11', [0, 1, 1]);
-        //addDay('15 Onsdag', '15', '01', '', [3, 1, 0]);
-        //addDay('16 Torsdag', '30', '32', '31', [1, 3, 1]);
-        //addDay('17 Fredag', '21', '17', '', [1, 3, 0]);
-        //addDay('18 Lördag', '03', '', '', [2, 0, 0]);
+		
 
         function buildTraining(training, timeOnDay, description) {
             var title = "Vila";
