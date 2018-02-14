@@ -305,70 +305,45 @@
         //};
 
         addDay('18 Söndag')
-            .addSession(16, 18, 'EM', '10', 2, 'Tänk på att flygresor sliter och satsa framförallt på att komma in i kartan')
-            .addSession(22.5, 24, 'Natt', '12', 1, 'Kort passa på väg till flygplatsen för att hämta Agnes')
-            .addSession(18, 19, 'Till affären', null, null, 'Handla för söndag lunch + måndag mellanmål + lunch')
-            .addSession(19, 20, 'middag', null, 10);
+            .addSession(17, 18, 'EM', '14', 2, 'Tänk på att flygresor sliter och satsa framförallt på att komma in i kartan');
 
         addDay('19 Måndag')
-        .addSession(10, 12, 'FM', '18', 3)
-        .addSession(16.5, 17, '7-kamp (1)', null, null, 'Jogg till stranden där vi kör tävlingen')
-        .addSession(17, 19, 'EM', '11', 1)
-        .addSession(19, 20, 'middag', null, 10);
+        .addSession(10, 12, 'Sprint', '18', 3)
+        .addSession(17, 19, 'Multiteknik', '03', 1);
 
 
         addDay('20 Tisdag')
-        .addSession(8, 9.5, 'Resa')
-        .addSession(9.5, 10.5, 'FM', '30', 1)
-        .addSession(10.5, 11, 'Mellanmål')
-        .addSession(12, 13, 'T2', '32', 3)
-        .addSession(13, 14, 'Lunch')
-        .addSession(16.5, 18, 'EM', '31', 1)
-        .addSession(18, 19.5, 'Resa')
-        .addSession(20, 21, 'middag', null, 10);
+        .addSession(9.5, 10.5, 'Downhills', '12', 2)
+        .addSession(17, 20, 'EM or Night', '06', 1);
 
 
 
         addDay('21 Onsdag')
         //.addSession(10, 12, 'FM', '05', 4)
-        .addSession(15, 17, 'EM', '19', 1)
-        .addSession(17, 17.5, 'Tävling 3 + 4 på beachen')
-        .addSession(19, 20, 'Night', '41', 2, 'SI-racee')
-        .addSession(20, 21, 'middag', null, 10);
+        .addSession(10, 12, 'Stafett-träning', '05', 4)
+        .addSession(17, 19, 'Medel', '15', 1);
 
 
 
 
         addDay('22 Torsdag')
         //.addSession(10, 12, 'FM', '05', 4)
-        .addSession(10, 10.5, 'Till träning (5 min)')
-        .addSession(10.5, 12, 'FM', 'SI2', 3)
-        .addSession(16, 18, 'EM', '01', 1)
-        .addSession(19, 20, 'middag', null, 10)
-        .addSession(20, 20.30, 'tävling');
+        .addSession(10, 12, 'Medel', '10', 2)
+        .addSession(17, 20, 'EM or Night', '13', 1);
 
         addDay('23 Fredag')
-            .addSession(8, 9, 'Resa')
-        .addSession(9, 10, 'FM', '23', 1)
-        .addSession(12, 13, 'T2', '27', 3)
-        .addSession(14, 15, 'Tävling')
-        .addSession(16, 18, 'EM', '25', 1)
-        .addSession(18, 19, 'Resa')
-        .addSession(19, 20, 'middag', null, 10);
+        .addSession(10, 11, 'Medel', '02', 1)
+        .addSession(17, 18, 'Sprint', '11', 3);
 
 
         addDay('24 Lördag')
         //.addSession(10, 12, 'FM', '05', 4)
-        .addSession(10, 12, 'FM', '05', 4)
-        .addSession(16, 18, 'EM', '22', 1)
-        .addSession(19, 20, 'middag')
-        .addSession(20, 20.5, 'tävling');
+        .addSession(10, 12, 'Träningstävling - lång', '04', 4)
+        .addSession(17, 18, 'Forest sprint', '00', 2);
 
 
         addDay('25 Söndag')
-        //.addSession(10, 12, 'FM', '05', 4)
-        .addSession(8, 10, 'FM', '14', 2)
-        .addSession(10, 16, 'Hemresa');
+        .addSession(8, 12, 'Hemresa');
 		
 
         function buildTraining(training, timeOnDay, description) {
@@ -396,7 +371,7 @@
     + "</dl>"
                     + "</div>"
                                     + "<div class='map'>"
-                        + "<a href='https://www.google.com/maps/place/" + coords[0] + "," + coords[1] + "' target='_blank'>'<img src='//maps.googleapis.com/maps/api/staticmap?zoom=10&size=280x180&maptype=roadmap&markers=color:blue%7Clabel:S%7C" + coords[0] + "," + coords[1] + "&sensor=true' alt='' /></a>"
+                        + "<a href='https://www.google.com/maps/place/" + coords[0] + "," + coords[1] + "' target='_blank'>'<img src='https://maps.googleapis.com/maps/api/staticmap?zoom=10&size=280x180&maptype=roadmap&markers=color:blue%7Clabel:S%7C" + coords[0] + "," + coords[1] + "&sensor=true' alt='' /></a>"
                     + "</div>"
                 + "</div></section>";
             }
